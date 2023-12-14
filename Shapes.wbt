@@ -1,0 +1,45 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/BrushedAluminium.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/DryMud.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.03848693926102435 0.03725863732504163 0.9985642440278938 1.6047352581783174
+  position 0.29749741107719274 -2.771306370779032 0.6363726487188567
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+DEF Plane Transform {
+  translation 0 0 0.3
+  children [
+    Shape {
+      appearance BrushedAluminium {
+      }
+      geometry Plane {
+        size 0.6 0.6
+      }
+    }
+  ]
+}
+DEF Sphere Transform {
+  translation 0 0 0.5
+  children [
+    Shape {
+      appearance DryMud {
+      }
+      geometry Sphere {
+        radius 0.2
+        subdivision 2
+      }
+    }
+  ]
+}
